@@ -1,0 +1,11 @@
+{
+    "id": "furkankalafat/settings-menu-editor",
+    "name": "Settings Menu Editor",
+    "namespace": "FurkanKalafat\\SettingsMenuEditor\\",
+    "provider": "FurkanKalafat\\SettingsMenuEditor\\Providers\\SettingsMenuEditorServiceProvider",
+    "author": "Furkan Kalafat",
+    "url": "https://github.com/furkanka37",
+    "version": "1.0.0",
+    "description": "Easy editor for settings and system menus.",
+    "minimum_core_version": "7.3.0"
+}
