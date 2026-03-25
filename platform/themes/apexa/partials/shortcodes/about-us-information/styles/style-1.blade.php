@@ -1,4 +1,4 @@
-<section class="about-area pt-120 pb-120 shortcode-about-us-information shortcode-about-us-information-style-1" @style($variablesStyle)>
+<section class="about-area  shortcode-about-us-information shortcode-about-us-information-style-1" @style($variablesStyle)>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">

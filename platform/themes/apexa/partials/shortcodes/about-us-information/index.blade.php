@@ -2,7 +2,7 @@
     $style = $shortcode->style;
     $style = $style ? (in_array($style, array_map(function ($index) {
         return "style-$index";
-    }, range(1, 16))) ? $style : 'style-1') : null;
+    }, range(1, 17))) ? $style : 'style-1') : null;
 
     $bgColor = $shortcode->background_color;
     $bgImage = $shortcode->background_image ? RvMedia::getImageUrl($shortcode->background_image) : null;

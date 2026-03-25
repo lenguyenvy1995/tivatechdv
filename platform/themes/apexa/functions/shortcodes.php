@@ -371,7 +371,7 @@ app()->booted(function (): void {
                 UiSelectorField::class,
                 UiSelectorFieldOption::make()
                     ->choices(
-                        collect(range(1, 16))
+                        collect(range(1, 17))
                             ->mapWithKeys(fn ($number) => [
                                 ($style = "style-$number") => [
                                     'label' => __('Style :number', ['number' => $number]),
@@ -411,6 +411,30 @@ app()->booted(function (): void {
                 MediaImageField::class,
                 MediaImageFieldOption::make()
                     ->label(__('Image'))
+                    ->toArray()
+            )
+            ->add(
+                'layout_position',
+                RadioField::class,
+                RadioFieldOption::make()
+                    ->label(__('Layout position (Desktop)'))
+                    ->choices([
+                        'left' => __('Image Left - Content Right'),
+                        'right' => __('Image Right - Content Left'),
+                    ])
+                    ->selected(Arr::get($attributes, 'layout_position', 'left'))
+                    ->toArray()
+            )
+            ->add(
+                'mobile_position',
+                RadioField::class,
+                RadioFieldOption::make()
+                    ->label(__('Mobile position'))
+                    ->choices([
+                        'top' => __('Image Top'),
+                        'bottom' => __('Image Bottom'),
+                    ])
+                    ->selected(Arr::get($attributes, 'mobile_position', 'top'))
                     ->toArray()
             )
             ->add(
