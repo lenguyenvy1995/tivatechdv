@@ -7,10 +7,13 @@
     $bottomBackgroundColor = theme_option('footer_bottom_background_color', '#ECF6FA');
     $backgroundImage = $backgroundImage ? RvMedia::getImageUrl($backgroundImage) : null;
 @endphp
+@php
+$footerSidebar = dynamic_sidebar('footer_sidebar');
+@endphp
 
 {!! dynamic_sidebar('top_footer_sidebar') !!}
 
-<footer id="footer" @style([
+<footer id="footer" class="pb-5" @style([
     "--footer-background-color: $backgroundColor",
     "--footer-heading-color: $headingColor",
     "--footer-text-color: $textColor",
@@ -19,18 +22,32 @@
     "--footer-background-image: url($backgroundImage)" => $backgroundImage,
 ])>
     <div class="footer-area">
+    
+    
+    @if (!empty(trim($footerSidebar)))
         <div class="footer-top">
             <div class="container">
                 <div class="row wrapper-footer-widgets">
-                    {!! dynamic_sidebar('footer_sidebar') !!}
+                    {!! $footerSidebar !!}
                 </div>
             </div>
         </div>
+    @endif
         <div id="footer-bottom" class="footer-bottom">
             <div class="container">
                 <div class="d-flex gap-3 justify-content-center align-items-center bottom-footer-wrapper">
                     {!! dynamic_sidebar('bottom_footer_sidebar') !!}
                 </div>
+            </div>
+        </div>
+        <div id="footer-copyright" class="footer-copyright py-4 bg-dark">
+            <div class="container">
+                <div class="d-flex gap-3 justify-content-center align-items-center text-center bottom-footer-wrapper">
+                    <div class="copy">
+                        <p class="m-0 text-white"> Copyright © {{ date('Y') }} <span class="text-uppercase text-white">{!! theme_option('copyright') !!} </span> - design by <a href="https://tivatech.vn">TIVATECH.VN</a></p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
