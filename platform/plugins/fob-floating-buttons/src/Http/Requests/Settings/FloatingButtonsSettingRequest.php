@@ -11,9 +11,11 @@ class FloatingButtonsSettingRequest extends Request
     public function rules(): array
     {
         return [
-            'enabled' => $onOffRule = new OnOffRule,
+            'enabled' => $onOffRule = new OnOffRule(),
             'position' => ['required', 'string', Rule::in(['bottom_right', 'bottom_left', 'center_right', 'center_left'])],
-            'display_on_mobile' => ['required', 'string', Rule::in(['hide', 'collapsed'])],
+           
+            'show_full_info' => ['required', Rule::in(['yes', 'no'])], // <-- thêm dòng này
+           'style_mobile_buttons' => ['required', Rule::in(['style1', 'style2', 'style3'])],
             'offset_x' => ['required', 'integer'],
             'offset_y' => ['required', 'integer'],
             'margin_between' => ['required', 'integer'],
