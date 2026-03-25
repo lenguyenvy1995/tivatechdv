@@ -44,7 +44,7 @@ app()->booted(function (): void {
                 UiSelectorField::class,
                 UiSelectorFieldOption::make()
                     ->choices(
-                        collect(range(1, 3))
+                        collect(range(1, 4))
                             ->mapWithKeys(fn ($number) => [
                                 ($style = "style-$number") => [
                                     'label' => __('Style :number', ['number' => $number]),

@@ -26,6 +26,8 @@ use Botble\Shortcode\Forms\Fields\ShortcodeTabsField;
 use Botble\Shortcode\Forms\ShortcodeForm;
 use Botble\Theme\Facades\Theme;
 use Botble\Theme\Supports\ThemeSupport;
+use Botble\Base\Forms\FieldOptions\RadioFieldOption;
+use Botble\Base\Forms\Fields\RadioField;
 use Illuminate\Support\Arr;
 
 app()->booted(function (): void {
@@ -797,6 +799,234 @@ app()->booted(function (): void {
                             'title' => __('Button URL'),
                         ],
                     ])
+                    ->toArray()
+            )
+            ->add(
+                'background_image',
+                MediaImageField::class,
+                MediaImageFieldOption::make()
+                    ->label(__('Background image'))
+                    ->toArray()
+            )
+            ->add(
+                'background_color',
+                ColorField::class,
+                ColorFieldOption::make()
+                    ->label(__('Background color'))
+                    ->toArray(),
+            );
+    });
+
+    Shortcode::register('why-us', __('Vì sao chọn chúng tôi'), __('Đại đi '), function (ShortcodeCompiler $shortcode): ?string {
+        $tabs = Shortcode::fields()->getTabsData(['title', 'description', 'icon', 'icon_image'], $shortcode);
+
+        return Theme::partial('shortcodes.why-us.index', compact('shortcode', 'tabs'));
+    });
+
+    Shortcode::setPreviewImage('why-us', Theme::asset()->url('images/ui-blocks/why-us'));
+
+    Shortcode::setAdminConfig('why-us', function (array $attributes) {
+        return ShortcodeForm::createFromArray($attributes)
+            ->add(
+                'style',
+                UiSelectorField::class,
+                UiSelectorFieldOption::make()
+                    ->choices(
+                        collect(range(1, 2))
+                            ->mapWithKeys(fn($number) => [
+                                ($style = "style-$number") => [
+                                    'label' => "Kiểu số $number",
+                                ],
+                            ])
+                            ->toArray()
+                    )
+                    ->selected(Arr::get($attributes, 'style', 'style-1'))
+                    ->withoutAspectRatio()
+                    ->numberItemsPerRow(1)
+                    ->toArray()
+            )
+            ->add(
+                'title',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Title'))
+            )
+            ->add(
+                'description',
+                TextareaField::class,
+                TextareaFieldOption::make()
+                    ->label(__('Description'))
+            )
+            ->add(
+                'tabs',
+                ShortcodeTabsField::class,
+                ShortcodeTabsFieldOption::make()
+                    ->attrs($attributes)
+                    ->fields([
+                        'title' => [
+                            'title' => __('Title'),
+                        ],
+                        'description' => [
+                            'title' => __('Description'),
+                            'type' => 'textarea',
+                        ],
+                        'icon' => [
+                            'title' => __('Icon'),
+                            'type' => 'coreIcon',
+                        ],
+                        'icon_image' => [
+                            'title' => __('Icon image'),
+                            'type' => 'image',
+                        ],
+
+                    ])
+                    ->toArray()
+            )
+            ->add(
+                'background_image',
+                MediaImageField::class,
+                MediaImageFieldOption::make()
+                    ->label(__('Background image'))
+                    ->toArray()
+            )
+            ->add(
+                'background_color',
+                ColorField::class,
+                ColorFieldOption::make()
+                    ->label(__('Background color'))
+                    ->toArray(),
+            );
+    });
+ 
+
+    Shortcode::register('example-img', __('Khối Hình Ảnh'), __('thêm làm hình ảnh dẫn chứng minh hoạ click được '), function (ShortcodeCompiler $shortcode): ?string {
+        $tabs = Shortcode::fields()->getTabsData(['title', 'icon', 'icon_image'], $shortcode);
+
+        return Theme::partial('shortcodes.example-img.index', compact('shortcode', 'tabs'));
+    });
+
+    Shortcode::setPreviewImage('example-img', Theme::asset()->url('images/ui-blocks/example-img.png'));
+
+    Shortcode::setAdminConfig('example-img', function (array $attributes) {
+        return ShortcodeForm::createFromArray($attributes)
+            ->add(
+                'title',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Title'))
+            )
+            ->add(
+                'description',
+                TextareaField::class,
+                TextareaFieldOption::make()
+                    ->label(__('Description'))
+            )
+            ->add(
+                'tabs',
+                ShortcodeTabsField::class,
+                ShortcodeTabsFieldOption::make()
+                    ->attrs($attributes)
+                    ->fields([
+                        'title' => [
+                            'title' => __('Title'),
+                        ],
+
+                        'icon' => [
+                            'title' => __('Icon'),
+                            'type' => 'coreIcon',
+                        ],
+                        'icon_image' => [
+                            'title' => __('Icon image'),
+                            'type' => 'image',
+                        ],
+
+                    ])
+                    ->toArray()
+            )
+            ->add(
+                'background_image',
+                MediaImageField::class,
+                MediaImageFieldOption::make()
+                    ->label(__('Background image'))
+                    ->toArray()
+            )
+            ->add(
+                'background_color',
+                ColorField::class,
+                ColorFieldOption::make()
+                    ->label(__('Background color'))
+                    ->toArray(),
+            );
+    });
+
+    Shortcode::register('page-contact', __('Trang Liên Hệ'), __('Trang Liên Hệ'), function (ShortcodeCompiler $shortcode): ?string {
+        $tabs = Shortcode::fields()->getTabsData(['title', 'icon', 'custom_url'], $shortcode);
+
+        return Theme::partial('shortcodes.page-contact.index', compact('shortcode', 'tabs'));
+    });
+
+    Shortcode::setPreviewImage('page-contact', Theme::asset()->url('images/ui-blocks/page-contact.png'));
+
+    Shortcode::setAdminConfig('page-contact', function (array $attributes) {
+        return ShortcodeForm::createFromArray($attributes)
+            ->add(
+                'title',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Title'))
+            )
+            ->add(
+                'description',
+                TextareaField::class,
+                TextareaFieldOption::make()
+                    ->label(__('Description'))
+            )
+            ->add(
+                'tabs_position',
+                RadioField::class,
+                RadioFieldOption::make()
+                    ->label(__('Tabs Position'))
+                    ->choices([
+                        'above' => 'Hiển thị trên nút',
+                        'below' => 'Hiển thị dưới nút',
+                    ])
+                    ->selected('above') 
+                    ->toArray()
+            )
+            ->add(
+                'tabs',
+                ShortcodeTabsField::class,
+                ShortcodeTabsFieldOption::make()
+                    ->attrs($attributes)
+                    ->fields([
+                        'title' => [
+                            'title' => __('Title'),
+                        ],
+                        'custom_url' => [
+                            'title' => __('Custom URL'),
+                            'type' => 'text',
+                            'placeholder' => __('Enter a custom link'),
+                        ],
+                        'icon' => [
+                            'title' => __('Icon'),
+                            'type' => 'coreIcon',
+                        ],
+
+                    ])
+                    ->toArray()
+            )
+            ->add(
+                'button_label',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Button label'))
+                    ->toArray()
+            )
+            ->add(
+                'button_url',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Button URL'))
                     ->toArray()
             )
             ->add(
