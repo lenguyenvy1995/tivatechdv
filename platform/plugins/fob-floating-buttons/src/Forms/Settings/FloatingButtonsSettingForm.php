@@ -173,16 +173,38 @@ class FloatingButtonsSettingForm extends SettingForm
                     ->value(setting('fob-floating-buttons.margin_between', 0))
                     ->toArray()
             )
+            // ->add(
+            //     'display_on_mobile',
+            //     RadioField::class,
+            //     RadioFieldOption::make()
+            //         ->choices([
+            //             'hide' => trans('plugins/fob-floating-buttons::fob-floating-buttons.hide_on_mobile'),
+            //             'collapsed' => trans('plugins/fob-floating-buttons::fob-floating-buttons.collapsed_on_mobile'),
+            //         ])
+            //         ->selected(setting('fob-floating-buttons.display_on_mobile', 'collapsed'))
+            //         ->label(trans('plugins/fob-floating-buttons::fob-floating-buttons.display_on_mobile'))
+            //         ->toArray()
+            // )
             ->add(
-                'display_on_mobile',
+                'show_full_info',
                 RadioField::class,
                 RadioFieldOption::make()
+                    ->label(__('Show full information'))
+                    ->choices(['yes' => 'Yes', 'no' => 'No'])
+                    ->selected(setting('fob-floating-buttons.show_full_info', 'no')) // dùng selected()
+                    ->toArray()
+            )
+            ->add(
+                'style_mobile_buttons',
+                RadioField::class,
+                RadioFieldOption::make()
+                    ->label(__('Mobile buttons style')) // đổi label cho đúng
                     ->choices([
-                        'hide' => trans('plugins/fob-floating-buttons::fob-floating-buttons.hide_on_mobile'),
-                        'collapsed' => trans('plugins/fob-floating-buttons::fob-floating-buttons.collapsed_on_mobile'),
+                        'style1' => 'Hiển thị ở dưới',
+                        'style2' => 'Hiển thị icon',
+                        'style3' => 'Hiển thị icon + full thông tin',
                     ])
-                    ->selected(setting('fob-floating-buttons.display_on_mobile', 'collapsed'))
-                    ->label(trans('plugins/fob-floating-buttons::fob-floating-buttons.display_on_mobile'))
+                    ->selected(setting('fob-floating-buttons.style_mobile_buttons', 'style1'))
                     ->toArray()
             )
             ->add('items', RepeaterField::class, [

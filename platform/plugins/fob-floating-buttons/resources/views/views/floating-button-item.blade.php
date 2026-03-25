@@ -20,7 +20,7 @@
             break;
     }
 @endphp
-<li class="sb-{{ Str::slug($title) }} {{ $wrapperClass ?? '' }}"
+<li class="flex-grow-1 sb-mobile sb-{{ Str::slug($title) }} {{ $wrapperClass ?? '' }}"
 
     @style(["--fb-background-color: $bgColor" => $bgColor, "margin: {$marginBetween}px 0" => $marginBetween])
 >
@@ -50,3 +50,25 @@
         <div class="sb-label">{{ $title }}</div>
     </a>
 </li>
+@php
+    $floatingButton = collect($floatingButton)->pluck('value', 'key');
+    $title = $floatingButton->get('title');
+    $bgColor = $floatingButton->get('background_color');
+    $bgColor = $bgColor === 'transparent' ? 'var(--primary-color)' : $bgColor;
+    $enableRingAnimation = $floatingButton->get('enable_ring_animation');
+    $marginBetween = setting('fob-floating-buttons.margin_between', 0);
+
+    $url = $floatingButton->get('url');
+
+    switch ($floatingButton->get('type')) {
+        case 'phone':
+            $url = 'tel:' . $url;
+            break;
+        case 'email':
+            $url = 'mailto:' . $url;
+            break;
+        case 'whatsapp':
+            $url = 'https://wa.me/' . $url;
+            break;
+    }
+@endphp
