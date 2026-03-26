@@ -77,9 +77,12 @@
 footer {
     --tg-body-color: var(--footer-text-color);
     background-color: var(--footer-background-color);
+    background-size: cover;
+    background-position: center center;
     color: var(--footer-text-color);
     border-top: 1px solid var(--footer-border-color);
-
+    background-image: var(--footer-background-image);
+    background-repeat: no-repeat;
     h1,
     h2,
     h3,
@@ -95,9 +98,6 @@ footer {
         color: var(--footer-text-color);
     }
 
-    background-image: var(--footer-background-image);
-    background-repeat: no-repeat;
-    background-size: contain;
 
     .footer-bottom {
         background-color: var(--footer-bottom-background-color);
@@ -219,6 +219,7 @@ footer {
     background-image: var(--background-image);
     background-repeat: no-repeat;
     background-size: cover;
+   
 }
 
 .shortcode-services {
@@ -826,7 +827,7 @@ footer {
             li {
                 .content {
                     font-weight: 700;
-                    color: var(--tg-color-gray-2);
+                   color: var(--footer-text-color);
                 }
             }
         }

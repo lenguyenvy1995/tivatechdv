@@ -58,7 +58,7 @@
                     li {
                         & a {
                             font-weight: 700;
-                            color: var(--tg-color-gray-2);
+                           color: var(--footer-text-color);
                         }
                     }
                 }
@@ -88,7 +88,7 @@
                 & .list-wrap {
                     & li {
                         & a {
-                            color: var(--tg-color-gray-2);
+                           color: var(--footer-text-color);
                         }
                     }
                 }
@@ -99,7 +99,7 @@
                         & .icon,
                         & p,
                         & a {
-                            color: var(--tg-color-gray-2);
+                           color: var(--footer-text-color);
                         }
                     }
                 }
@@ -121,7 +121,7 @@
                 width: 100%;
             }
             & > p {
-                color: var(--tg-color-gray-2);
+               color: var(--footer-text-color);
                 margin-bottom: 15px;
                 font-weight: 700;
             }
@@ -172,7 +172,7 @@
                         background: #232563;
                         @include border-radius(50%);
                         font-size: 20px;
-                        color: var(--tg-color-gray-2);
+                       color: var(--footer-text-color);
                         &:hover {
                             background: var(--tg-theme-primary);
                             color: var(--tg-color-white-default);
@@ -202,7 +202,7 @@
                         background: #232563;
                         @include border-radius(50%);
                         font-size: 20px;
-                        color: var(--tg-color-gray-2);
+                       color: var(--footer-text-color);
                         &:hover {
                             background: var(--tg-theme-primary);
                             color: var(--tg-color-white-default);
@@ -630,19 +630,19 @@
     & .list-wrap {
         & li {
             & .icon {
-                color: var(--tg-color-gray-2);
+               color: var(--footer-text-color);
             }
             & .content {
                 & a {
                     font-weight: 700;
-                    color: var(--tg-color-gray-2);
+                   color: var(--footer-text-color);
                     &:hover {
                         color: var(--tg-theme-primary);
                     }
                 }
                 & p {
                     font-weight: 700;
-                    color: var(--tg-color-gray-2);
+                   color: var(--footer-text-color);
                 }
             }
         }

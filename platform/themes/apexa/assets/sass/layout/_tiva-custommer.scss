@@ -3,9 +3,12 @@
     display: inline-block;
     margin-right: 20px;
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
+
+//   why-us vì sao chọn chúng tôi  by tivatech 
 .shortcode-why-us {
 
     &-style-1 {
@@ -55,6 +58,7 @@
 
             .card-icon {
                 width: calc(20% - 8px);
+
                 svg.icon,
                 img {
                     width: 100%;
@@ -63,8 +67,11 @@
                     object-fit: cover;
                 }
             }
-            .card-body{
+
+            .card-body {
                 width: calc(80% - 8px);
+                padding: 0;
+
                 .card-title {
                     letter-spacing: -1px;
                     font-size: 18px;
@@ -72,15 +79,69 @@
                     font-weight: 600;
                     color: var(--tg-theme-primary);
                 }
-    
+
                 .card-text {
                     font-size: 14px;
                     color: #141412;
                     text-align: justify;
                 }
             }
-           
+
         }
     }
 
+}
+
+.shortcode-site-statistics {
+    margin-bottom: 4rem;
+    padding: 85px 0px 0px 0px ;
+
+    .section-title h2,
+    .section-title p {
+        color: var(--tg-color-white-default);
+    }
+
+    .counter-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 0px;
+
+        .icon {
+            font-size: 72px;
+            line-height: 0;
+            color: var(--tg-theme-primary);
+            width: 45%;
+            transition: all 0.3s ease-out 0s;
+        }
+
+        .content {
+            .count {
+                line-height: 0.8;
+                margin-bottom: 5px;
+                font-size: 40px;
+                display: flex;
+                align-items: center;
+                font-weight: 800;
+            }
+        }
+    }
+    &-style-1{
+        padding: 110px 0 80px !important;
+        margin-bottom: 0;
+    }
+    &-style-2 {
+        .box-counter-home7 {
+            padding: 30px 20px;
+            bottom: -2rem;
+            background-color: var(--tg-color-white-default);
+            border-radius: 16px;
+            -ms-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            -o-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 100%;
+            position: relative;
+        }
+    }
 }
