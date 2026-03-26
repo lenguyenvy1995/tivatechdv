@@ -25,6 +25,7 @@
 }
 
 .show-admin-bar {
+
     .offCanvas__info,
     .tgmobile__menu,
     .sticky-menu {
@@ -40,6 +41,7 @@
 
     z-index: 100 !important;
 }
+
 .tgmobile__menu-bottom {
     margin-top: unset;
 }
@@ -83,6 +85,7 @@ footer {
     border-top: 1px solid var(--footer-border-color);
     background-image: var(--footer-background-image);
     background-repeat: no-repeat;
+
     h1,
     h2,
     h3,
@@ -123,7 +126,7 @@ footer {
         color: var(--breadcrumb-txt-color, #9faabb) !important;
     }
 
-    .breadcrumb-item + .breadcrumb-item::before {
+    .breadcrumb-item+.breadcrumb-item::before {
         color: var(--breadcrumb-txt-color, var(--bs-breadcrumb-divider-color)) !important;
     }
 
@@ -137,6 +140,7 @@ footer {
 
     .tg-header__top-info {
         li {
+
             a,
             .icon {
                 color: var(--header-top-text-color);
@@ -219,7 +223,7 @@ footer {
     background-image: var(--background-image);
     background-repeat: no-repeat;
     background-size: cover;
-   
+
 }
 
 .shortcode-services {
@@ -257,6 +261,7 @@ footer {
         background-color: var(--background-color);
     }
 }
+
 .card-team-area-six {
     .card-image {
         &:before {
@@ -301,6 +306,7 @@ footer {
     .list-wrap {
         li {
             &:hover {
+
                 svg,
                 img {
                     -webkit-transform: rotateY(180deg);
@@ -310,6 +316,7 @@ footer {
         }
 
         .icon {
+
             svg,
             img {
                 transition: 0.3s linear;
@@ -320,6 +327,7 @@ footer {
     }
 
     .choose__list-icon {
+
         svg,
         img {
             transition: 0.3s linear;
@@ -332,6 +340,7 @@ footer {
 .shortcode-about-us-information,
 .shortcode-contact-form {
     .icon {
+
         svg,
         img {
             width: 40px !important;
@@ -344,6 +353,7 @@ footer {
 .shortcode-about-us-information-style-8 {
     .list-wrap {
         .icon {
+
             svg,
             img {
                 height: 60px !important;
@@ -362,6 +372,7 @@ footer {
 .shortcode-about-us-information-style-12 {
     .choose__list-box-two {
         .choose__list-icon-two {
+
             svg,
             img {
                 width: 60px !important;
@@ -383,6 +394,7 @@ footer {
     .services-item {
         &:hover {
             .services-icon {
+
                 svg.icon,
                 img {
                     transform: rotateY(180deg);
@@ -393,6 +405,7 @@ footer {
     }
 
     .services-icon {
+
         svg.icon,
         img {
             position: unset;
@@ -404,6 +417,7 @@ footer {
 
     .services-icon {
         &.icon-large {
+
             svg.icon,
             img {
                 width: 60px;
@@ -412,6 +426,7 @@ footer {
         }
 
         &.icon-medium {
+
             svg.icon,
             img {
                 width: 45px;
@@ -442,6 +457,7 @@ footer {
 
 .shortcode-service-categories {
     .service-categories-icon {
+
         svg.icon,
         img {
             position: unset;
@@ -455,6 +471,7 @@ footer {
     .service-categories-item {
         &:hover {
             .service-categories-icon {
+
                 svg.icon,
                 img {
                     transform: rotateY(180deg);
@@ -466,6 +483,7 @@ footer {
 
     &.shortcode-service-categories-style-3 {
         .service-categories-icon {
+
             svg.icon,
             img {
                 width: 60px;
@@ -478,6 +496,7 @@ footer {
 
 .shortcode-content-feature-list {
     .feature-icon {
+
         svg.icon,
         img {
             position: unset;
@@ -491,6 +510,7 @@ footer {
     .feature-item {
         &:hover {
             .feature-icon {
+
                 svg.icon,
                 img {
                     transform: rotateY(180deg);
@@ -627,6 +647,7 @@ footer {
 
             button {
                 span.icon {
+
                     svg,
                     img {
                         width: 24px;
@@ -827,7 +848,7 @@ footer {
             li {
                 .content {
                     font-weight: 700;
-                   color: var(--footer-text-color);
+                    color: var(--footer-text-color);
                 }
             }
         }
@@ -846,6 +867,7 @@ footer {
     .card-step {
         .card-icon {
             background-image: url('../images/icons/bg-step-icon.svg') !important;
+
             svg.icon,
             img {
                 width: 36px;
@@ -1033,7 +1055,8 @@ footer {
     }
 }
 
-.widget-newsletter, .shortcode-newsletter {
+.widget-newsletter,
+.shortcode-newsletter {
     .call-back-form {
         form {
             .input-group {
@@ -1076,7 +1099,7 @@ footer {
             top: 45%;
         }
 
-        .mb-3.position-relative + button.btn {
+        .mb-3.position-relative+button.btn {
             margin-bottom: 85px;
         }
     }
@@ -1096,7 +1119,9 @@ footer {
     }
 }
 
-.shortcode-team-style-3, .shortcode-about-us-information-style-9, .shortcode-about-us-information-style-6 {
+.shortcode-team-style-3,
+.shortcode-about-us-information-style-9,
+.shortcode-about-us-information-style-6 {
     padding-top: unset !important;
 }
 
@@ -1145,7 +1170,7 @@ footer {
     padding-top: 60px !important;
 }
 
-.testimonial__area-two + .shortcode-about-us-information-style-6 {
+.testimonial__area-two+.shortcode-about-us-information-style-6 {
     padding-top: 90px !important;
 }
 
@@ -1155,11 +1180,11 @@ footer {
     margin-bottom: 0 !important;
 }
 
-.brand-area + .shortcode-about-us-information-style-7 {
+.brand-area+.shortcode-about-us-information-style-7 {
     padding-top: 90px !important;
 }
 
-.journey_area-seven + .testimonials_area-seven {
+.journey_area-seven+.testimonials_area-seven {
     padding-top: 0 !important;
 }
 
@@ -1181,7 +1206,9 @@ footer {
 }
 
 .accordion-item {
-    .accordion-button, .accordion-button.collapsed {
+
+    .accordion-button,
+    .accordion-button.collapsed {
         &:after {
             background-image: url("../images/icons/plus.svg") !important;
         }
@@ -1233,7 +1260,9 @@ footer {
             }
 
             .product-option-item-values {
-                .form-select, .form-control {
+
+                .form-select,
+                .form-control {
                     padding: 18px 24px !important;
                 }
             }
@@ -1247,14 +1276,14 @@ footer {
     ul {
         li {
             &:hover {
-                > .sub-menu {
+                >.sub-menu {
                     opacity: 1;
                     transform: scale(1);
                     visibility: visible;
 
                     li {
                         &:hover {
-                            > .sub-menu {
+                            >.sub-menu {
                                 opacity: 1;
                                 transform: scale(1);
                                 visibility: visible;
@@ -1281,7 +1310,7 @@ footer {
 .product-faqs-accordion {
     .accordion-header {
         .accordion-button {
-            background:  var(--primary-color) !important;
+            background: var(--primary-color) !important;
 
             &:not(.collapsed) {
                 color: #ffffff !important;
@@ -1306,8 +1335,11 @@ footer {
         .container {
             z-index: 10;
 
-            .banner-content, .banner__content-three {
-                p, h2 {
+            .banner-content,
+            .banner__content-three {
+
+                p,
+                h2 {
                     color: #ffffff;
                 }
             }

@@ -16,7 +16,8 @@
         &-three {
             background-size: cover;
             background-position: center;
-            padding: 120px 0 90px;
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
 
             @media #{$xs} {
                 padding: 100px 0 70px;
@@ -26,7 +27,8 @@
         &-four {
             background-size: cover;
             background-position: center;
-            padding: 120px 0 90px;
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
             position: relative;
             z-index: 1;
 
@@ -38,7 +40,8 @@
         &-five {
             background-size: cover;
             background-position: center;
-            padding: 120px 0 90px;
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
 
             @media #{$xs} {
                 padding: 100px 0 70px;
@@ -56,7 +59,8 @@
         &-seven {
             background-size: cover;
             background-position: center;
-            padding: 120px 0 90px;
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
             position: relative;
             z-index: 1;
 
@@ -68,7 +72,8 @@
 
     &__area-two {
         background: var(--tg-heading-color);
-        padding: 120px 0 90px;
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
         position: relative;
         z-index: 1;
 
