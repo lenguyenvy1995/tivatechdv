@@ -7,7 +7,7 @@
         "--background-image: url($bgImage)" => $bgImage,
     ];
 @endphp
-<section class="shortcode-why-us  shortcode-why-us-style-1 py-4" @style($variablesStyle)>
+<section class="shortcode-why-us  shortcode-why-us-style-1 shortcode-tivatech py-4" @style($variablesStyle)>
     <div class="container">
         @if ($title = $shortcode->title)
             <div class="row justify-content-center">
@@ -41,7 +41,7 @@
                             @endif
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title text-center">{!! BaseHelper::clean($title) !!}</h5>
+                            <h3 class="card-title text-center">{!! BaseHelper::clean($title) !!}</h3>
 
                             @if ($description = Arr::get($item, 'description'))
                                 <p class="card-text text-justify truncate-3-custom  mb-0">{!! BaseHelper::clean($description) !!}</p>
