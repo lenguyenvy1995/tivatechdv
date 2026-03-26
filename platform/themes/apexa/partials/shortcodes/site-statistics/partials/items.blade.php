@@ -10,7 +10,7 @@
             @endif
 
             <div class="content">
-                <h2 class="count"><span class="odometer" data-count="{{ $data }}"></span>{{ Arr::get($tab, 'unit') }}</h2>
+                <h3 class="count"><span class="odometer" data-count="{{ $data }}"></span>{{ Arr::get($tab, 'unit') }}</h3>
                 @if ($title = Arr::get($tab, 'title'))
                     {!! BaseHelper::clean($title) !!}
                 @endif

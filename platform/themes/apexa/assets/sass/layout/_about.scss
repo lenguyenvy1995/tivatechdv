@@ -6,6 +6,7 @@
 .about {
     &-area {
         position: relative;
+
         @media #{$xs} {
             padding: 100px 0;
         }
@@ -28,7 +29,7 @@
             z-index: 1;
 
         }
-    }   
+    }
 
     &__area {
         &-four {

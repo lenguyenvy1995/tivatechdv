@@ -44,7 +44,7 @@
                             <h3 class="card-title text-center">{!! BaseHelper::clean($title) !!}</h3>
 
                             @if ($description = Arr::get($item, 'description'))
-                                <p class="card-text text-justify truncate-3-custom  mb-0">{!! BaseHelper::clean($description) !!}</p>
+                                <p class="card-text text-justify truncate-4-custom  mb-0">{!! BaseHelper::clean($description) !!}</p>
                             @endif
 
                         </div>
