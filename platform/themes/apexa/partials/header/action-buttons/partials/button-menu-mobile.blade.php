@@ -1,3 +1,6 @@
+<div class="mobile-lang me-2 d-lg-none">
+    {!! Theme::partial('header.action-buttons.partials.language-switcher') !!}
+</div>
 <div @class(['mobile-nav-toggler', $wrapperClass ?? null])>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
         <path d="M0 2C0 0.895431 0.895431 0 2 0C3.10457 0 4 0.895431 4 2C4 3.10457 3.10457 4 2 4C0.895431 4 0 3.10457 0 2Z" fill="currentcolor" />

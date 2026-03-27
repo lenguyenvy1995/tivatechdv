@@ -68,7 +68,7 @@
 @media screen and (max-width: 991px) {
     .bottom-footer-wrapper {
         flex-wrap: wrap;
-        flex-direction: column-reverse;
+    
 
         .footer-newsletter {
             width: 100%;
@@ -1348,7 +1348,7 @@ footer {
     }
 
     .tg-header__area {
-        background: rgba(255, 255, 255, 0.6);
+        background: rgb(255, 255, 255);
     }
 
     .tg-header__area-five.transparent-header {

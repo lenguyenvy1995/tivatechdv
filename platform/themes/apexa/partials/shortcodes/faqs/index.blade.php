@@ -8,7 +8,7 @@
         <div class="row align-items-center">
 
             <div @class([
-                'mb-30',
+                'mb-30 mb-md-0',
                 'col-lg-7' => $isFloatingBlockEnabled,
                 'col-lg-12' => !$isFloatingBlockEnabled,
             ])>

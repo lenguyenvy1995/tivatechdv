@@ -76,30 +76,12 @@
                                 </div>
                             </div>
                         </div>
-                        @if($author = $post->author)
-                            <div class="blog__avatar-wrap mb-60">
-                                @if ($avatar = $author->avatar_url)
-                                    <div class="blog__avatar-img">
-                                        <div class="avatar-wrapper">
-                                            {{ RvMedia::image($avatar, $author->name, 'thumb') }}
-                                        </div>
-                                    </div>
-                                @endif
-
-                                <div class="blog__avatar-info">
-                                    <span class="designation">{{ __('Author') }}</span>
-                                    <h4 class="name">{{ $author->name }}</h4>
-
-                                    @if($bio = $author->getMetaData('bio', true))
-                                        <p>{!! BaseHelper::clean($bio) !!}</p>
-                                    @endif
-                                </div>
-                            </div>
-                        @endif
+             
                     </div>
 
+                    @if (false)
                     {!! apply_filters(BASE_FILTER_PUBLIC_COMMENT_AREA, null, $post) !!}
-                </div>
+                @endif                </div>
 
                 @if($blogSidebar)
                     <div class="col-lg-4">

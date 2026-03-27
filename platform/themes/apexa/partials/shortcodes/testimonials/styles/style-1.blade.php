@@ -1,5 +1,18 @@
 <section class="shortcode-testimonials shortcode-testimonials-style-1 testimonial-area" @style($variablesStyle)>
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-title white-title text-center mb-50 tg-heading-subheading animation-style3">
+                    @if ($subtitle = $shortcode->subtitle)
+                        <span class="sub-title">{!! BaseHelper::clean($subtitle) !!}</span>
+                    @endif
+
+                    @if ($title = $shortcode->title)
+                        <h2 class="title tg-element-title">{!! BaseHelper::clean($title) !!}</h2>
+                    @endif
+                </div>
+            </div>
+        </div>
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 order-0 order-lg-2">
                 <div class="swiper-container testimonial-active">

@@ -8,7 +8,7 @@
 @endphp
 
 @if ($pageTitle = Theme::get('pageTitle'))
-    <section class="breadcrumb__area breadcrumb__bg" @if($bgImage) data-background="{{ RvMedia::getImageUrl($bgImage) }}" @endif
+    <section class="breadcrumb__area breadcrumb__bg d-none d-md-block" @if($bgImage) data-background="{{ RvMedia::getImageUrl($bgImage) }}" @endif
         @style([
             '--breadcrumb-bg-color: ' . $bgColor => $bgColor,
             '--breadcrumb-txt-color: ' . $textColor => $hasTextColor,

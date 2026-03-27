@@ -185,7 +185,7 @@
 
         &-content {
             &-two {
-                padding: 30px 30px;
+                padding: 20px;
 
                 @media #{$lg} {
                     padding: 30px 22px;
@@ -204,13 +204,13 @@
                 }
 
                 & .title {
-                    margin-bottom: 20px;
-                    font-size: 24px;
+                    margin-bottom: 0;
+                    font-size: 20px;
                     font-weight: var(--tg-fw-semi-bold);
                     text-transform: capitalize;
 
                     @media #{$xs} {
-                        font-size: 22px;
+                        font-size: 18px;
                     }
                 }
 
@@ -421,7 +421,7 @@
         }
 
         @media #{$md} {
-            margin-top: 100px;
+            margin-top: 10px;
         }
     }
 
@@ -452,11 +452,9 @@
 
     &__details {
         &-area {
-            padding: 120px 0;
-
-            @media #{$xs} {
-                padding: 100px 0;
-            }
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+         
         }
 
         &-thumb {
@@ -592,8 +590,7 @@
             border-top: 1px solid #e7e7e7;
             border-bottom: 1px solid #e7e7e7;
             padding: 20px 0;
-            margin-top: 40px;
-            margin-bottom: 70px;
+        
 
             & .post {
                 &-tags {

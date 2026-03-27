@@ -305,7 +305,9 @@
         padding-right: 32px;
         margin-bottom: 0px;
         padding-bottom: 25px;
-        color: var(--tg-color-white-default);
+        p{
+            color: var(--tg-color-white-default);
+        }
     }
 }
 
