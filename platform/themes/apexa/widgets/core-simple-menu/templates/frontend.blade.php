@@ -20,7 +20,7 @@
 
                             <div class="content">
                                 <a
-                                    @if($item->is_open_new_tab) target="_blank" @endif  @if($attrs = $item->attributes) {{ $attrs }} @endif href="{{ $url }}">{!! BaseHelper::clean($label) !!}
+                                    @if($item->is_open_new_tab) target="_blank" @endif  @if($attrs = $item->attributes) {{ $attrs }} @endif href="{{ $url }}" @class(['fw-bold', 'font-bold' => true])>{!! BaseHelper::clean($label) !!}
                                 </a>
                             </div>
                         </li>

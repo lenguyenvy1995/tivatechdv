@@ -16,7 +16,7 @@
                 @endif
             </div>
             <div @class(['content', $contentWrapperClass])>
-                <h4 class="title">{!! BaseHelper::clean($title) !!}</h4>
+                <h3 class="title">{!! BaseHelper::clean($title) !!}</h3>
 
                 @if ($description = Arr::get($item, 'description'))
                     <p>{!! BaseHelper::clean($description) !!}</p>

@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="card-info">
-                            <a title="{{ $service->name }}" href="{{ $service->url }}"><h5>{{ $service->name }}</h5></a>
+                            <a title="{{ $service->name }}" href="{{ $service->url }}"><h3>{{ $service->name }}</h3></a>
 
                             @if ($description = $service->description)
                                 <p class="truncate-3-custom">{!! BaseHelper::clean($description) !!}</p>

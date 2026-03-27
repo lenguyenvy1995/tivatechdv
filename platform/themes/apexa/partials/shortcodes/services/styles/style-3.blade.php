@@ -26,9 +26,9 @@
                                 @endif
                             </div>
                             <div class="services__item-top-title">
-                                <h2 class="title">
+                                <h3 class="title">
                                     <a class="truncate-1-custom" title="{{ $service->name }}" href="{{ $service->url }}">{{ $service->name }}</a>
-                                </h2>
+                                </h3>
                             </div>
                         </div>
                         <div class="services__content-three">

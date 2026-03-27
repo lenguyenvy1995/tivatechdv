@@ -1,4 +1,5 @@
-<section class="blog__post-area-two blog__post-bg-two shortcode-blog-posts shortcode-blog-posts-style-1" @style($variablesStyle)>
+<section class="blog__post-area-two blog__post-bg-two shortcode-blog-posts shortcode-blog-posts-style-1"
+    @style($variablesStyle)>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -14,8 +15,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-            @foreach($posts as $post)
-                <div class="col-lg-4 col-md-6">
+            @foreach ($posts as $post)
+                <div class="col-xl-3 col-md-6">
                     {!! Theme::partial('blog.post-styles.style-2', compact('post')) !!}
                 </div>
             @endforeach

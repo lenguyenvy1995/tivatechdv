@@ -5,11 +5,8 @@
 ===============================*/
 .contact {
     &__area {
-        padding: 120px 0;
-
-        @media #{$xs} {
-            padding: 100px 0;
-        }
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
     }
 
     &-map {

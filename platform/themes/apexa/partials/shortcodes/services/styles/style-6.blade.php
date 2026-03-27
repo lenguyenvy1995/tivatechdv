@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="services__content-five">
-                            <h2 class="title"><a class="truncate-1-custom" title="{{ $service->name }}" href="{{ $service->url }}">{{ $service->name }}</a></h2>
+                            <h3 class="title"><a class="truncate-1-custom" title="{{ $service->name }}" href="{{ $service->url }}">{{ $service->name }}</a></h3>
 
                             @if ($description = $service->description)
                                 <p class="truncate-3-custom">{!! BaseHelper::clean($description) !!}</p>

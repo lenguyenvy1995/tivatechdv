@@ -5,7 +5,7 @@
 <section class="project__area-two shortcode-projects shortcode-projects-style-3" @style($variablesStyle)>
     <div class="container">
         <div class="row">
-            <div class="col-xl-5 col-lg-6">
+            <div class="col-xl-7 col-lg-8">
                 <div class="section-title mb-50 tg-heading-subheading animation-style3">
                     @if ($subtitle = $shortcode->subtitle)
                         <span class="sub-title">{!! BaseHelper::clean($subtitle) !!}</span>

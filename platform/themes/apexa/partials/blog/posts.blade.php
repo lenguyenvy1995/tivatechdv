@@ -1,7 +1,7 @@
 @php
     $postStyle = theme_option('post_style');
 
-    $postStyle = in_array($postStyle, ['style-1', 'style-2']) ? $postStyle : 'style-1';
+    $postStyle = in_array($postStyle, ['style-1', 'style-2' 'style-3']) ? $postStyle : 'style-1';
 @endphp
 
 @if ($posts->isNotEmpty())

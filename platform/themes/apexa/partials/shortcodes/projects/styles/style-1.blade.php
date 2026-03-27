@@ -1,7 +1,7 @@
 <section class="project-area shortcode-projects shortcode-projects-style-1" @style($variablesStyle)>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-7">
+            <div class="col-xl-7 col-lg-8">
                 <div class="section-title text-center mb-50 tg-heading-subheading animation-style3">
                     @if ($subtitle = $shortcode->subtitle)
                         <span class="sub-title">{!! BaseHelper::clean($subtitle) !!}</span>

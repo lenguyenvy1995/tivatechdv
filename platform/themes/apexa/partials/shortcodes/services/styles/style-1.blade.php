@@ -31,7 +31,7 @@
                                         <x-core::icon :name="$icon"/>
                                     @endif
                                 </div>
-                                <h4 class="title"><a title="{{ $service->name }}" class="truncate-2-custom" href="{{ $service->url }}">{{ $service->name }}</a></h4>
+                                <h3 class="title"><a title="{{ $service->name }}" class="truncate-2-custom" href="{{ $service->url }}">{{ $service->name }}</a></h3>
                                 @if ($description = $service->description)
                                     <p class="truncate-3-custom">{!! BaseHelper::clean($description) !!}</p>
                                 @endif
@@ -43,14 +43,13 @@
                 @endforeach
             </div>
         </div>
+        @if (($buttonLabel = $shortcode->button_label) && ($buttonUrl = $shortcode->button_url))
         <div class="services-bottom-content">
             @if ($description = $shortcode->description)
                 <p>{!! BaseHelper::clean($description) !!}</p>
             @endif
-
-            @if (($buttonLabel = $shortcode->button_label) && ($buttonUrl = $shortcode->button_url))
                 <a href="{{ $buttonUrl }}" class="btn">{!! BaseHelper::clean($buttonLabel) !!}</a>
-            @endif
         </div>
+        @endif
     </div>
 </section>
