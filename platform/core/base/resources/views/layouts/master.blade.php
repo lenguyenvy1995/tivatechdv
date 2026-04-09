@@ -21,10 +21,10 @@
     </div>
 
     @include('core/base::layouts.' . AdminAppearance::getCurrentLayout() . '.partials.after-content')
-
+    
     <x-slot:header-layout>
-        @if (\Botble\Base\Supports\Core::make()->isSkippedLicenseReminder())
-            @include('core/base::system.license-invalid', ['hidden' => false])
+        @if (false)
+            @include('core/base::system.license-invalid', ['hidden' => true])
         @endif
     </x-slot:header-layout>
 

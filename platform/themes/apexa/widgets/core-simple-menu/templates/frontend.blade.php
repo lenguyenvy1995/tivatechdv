@@ -1,4 +1,4 @@
-<div @if(Theme::get('site-information-style-3')) class="col-xl-3 col-lg-4 col-md-6 col-sm-6 my-auto" @else class="col" @endif>
+<div @if(Theme::get('site-information-style-3')) class="col-xl-3 col-lg-4 col-md-6 col-sm-6 " @else class="col" @endif>
     <div>
         @if ($title = Arr::get($config, 'name'))
             <h4 class="fw-title">{!! BaseHelper::clean($title) !!}</h4>

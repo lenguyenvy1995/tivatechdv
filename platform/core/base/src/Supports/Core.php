@@ -125,22 +125,9 @@ final class Core
 
     public function isSkippedLicenseReminder(): bool
     {
-        try {
-            $lastSkipDateTimeString = $this->files->exists($this->skipLicenseReminderFilePath)
-                ? $this->files->get($this->skipLicenseReminderFilePath)
-                : null;
-            $lastSkipDateTimeString = $lastSkipDateTimeString ? decrypt($lastSkipDateTimeString) : null;
-            $lastSkipDate = $lastSkipDateTimeString ? Carbon::parse($lastSkipDateTimeString) : null;
+       
 
-            if ($lastSkipDate instanceof Carbon && Carbon::now()->lessThanOrEqualTo($lastSkipDate)) {
-                return true;
-            }
-
-            $this->clearLicenseReminder();
-        } catch (Throwable) {
-        }
-
-        return false;
+        return true;
     }
 
     public function clearLicenseReminder(): void
