@@ -16,7 +16,7 @@
         </div>
         <div class="row justify-content-center">
             @foreach ($posts as $post)
-                <div class="col-xl-4 col-md-6">
+                <div class="col-xl-3 col-md-6">
                     {!! Theme::partial('blog.post-styles.style-2', compact('post')) !!}
                 </div>
             @endforeach

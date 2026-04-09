@@ -79,7 +79,7 @@
         border: 1px solid var(--tg-border-1);
         background: var(--tg-color-white-default);
         @include border-radius(15px);
-        padding: 25px;
+        padding: 15px;
         margin-bottom: 30px;
 
         @media #{$xs} {

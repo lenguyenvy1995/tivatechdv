@@ -259,3 +259,115 @@
         display: none !important; // tránh duplicate
     }
 }
+
+.shortcode-categori-page{
+    &-style-1{
+
+        .service-categories-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        
+            .service-categories-icon {
+                img {
+                    width: 100%;
+                    height: 264px;
+                    object-fit: cover;
+                }
+            }
+        
+            .service-categories-content {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                z-index: 2;
+
+                .title {
+                    text-align: center;
+                    background-color: var(--tg-theme-primary);
+                    color: #fff;
+                    padding: 10px 0px;
+                    font-size: 1.25rem;
+                    a {
+                        &:hover {
+                            color: var(--tg-theme-secondary);
+                        }
+                    }
+                }
+           
+            }
+            &:hover {
+                color: var(--tg-theme-secondary);
+                .title {
+                    color: var(--tg-theme-secondary);
+                }
+            }
+        }
+    }
+
+
+    &-style-2 {
+        .service-categories-item {
+            background: var(--tg-color-white-default);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.35s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    
+            .service-categories-icon {
+                overflow: hidden;
+                position: relative;
+    
+                img {
+                    height: 220px;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+            }
+    
+            .service-categories-content {
+                padding: 20px;
+    
+                .title {
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 12px;
+                    transition: color 0.3s ease;
+    
+                    a {
+                        color: var(--tg-heading-color);
+                        text-decoration: none;
+    
+                        &:hover {
+                            color: var(--tg-theme-secondary);
+                        }
+                    }
+                }
+    
+                .description {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    text-align: justify;
+                    color: #666;
+                    margin-bottom: 0;
+                }
+            }
+    
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    
+                .service-categories-icon img {
+                    transform: scale(1.08);
+                }
+    
+                .title {
+                    color: var(--tg-theme-secondary);
+                }
+            }
+        }
+    }
+}

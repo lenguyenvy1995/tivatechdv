@@ -17,6 +17,7 @@
             <div class="{{ $displayEcommerceHeaderActions ? 'col-lg-8' : 'col-lg-6' }}">
                 {!! dynamic_sidebar('header_top_start_sidebar') !!}
             </div>
+             
             <div class="{{ $displayEcommerceHeaderActions ? 'col-lg-4' : 'col-lg-6' }}">
                 @if($displayEcommerceHeaderActions)
                     {!! Theme::partial('header.action-buttons.ecommerce-action-buttons') !!}

@@ -1068,5 +1068,92 @@ app()->booted(function (): void {
                     ->toArray(),
             );
     });
+
+
+    Shortcode::register('categori-page', __(' Danh Mục Trang Page'), __('lôi các trang service hay page tuỳ thích '), function (ShortcodeCompiler $shortcode): ?string {
+        $tabs = Shortcode::fields()->getTabsData(['title', 'description','custom_url', 'icon', 'icon_image'], $shortcode);
+
+        return Theme::partial('shortcodes.categori-page.index', compact('shortcode', 'tabs'));
+    });
+
+    Shortcode::setPreviewImage('categori-page', Theme::asset()->url('images/ui-blocks/categori-page'));
+
+    Shortcode::setAdminConfig('categori-page', function (array $attributes) {
+        return ShortcodeForm::createFromArray($attributes)
+            ->add(
+                'style',
+                UiSelectorField::class,
+                UiSelectorFieldOption::make()
+                    ->choices(
+                        collect(range(1, 2))
+                            ->mapWithKeys(fn($number) => [
+                                ($style = "style-$number") => [
+                                    'label' => "Kiểu số $number",
+                                ],
+                            ])
+                            ->toArray()
+                    )
+                    ->selected(Arr::get($attributes, 'style', 'style-1'))
+                    ->withoutAspectRatio()
+                    ->numberItemsPerRow(1)
+                    ->toArray()
+            )
+            ->add(
+                'title',
+                TextField::class,
+                TextFieldOption::make()
+                    ->label(__('Title'))
+            )
+            ->add(
+                'description',
+                TextareaField::class,
+                TextareaFieldOption::make()
+                    ->label(__('Description'))
+            )
+            ->add(
+                'tabs',
+                ShortcodeTabsField::class,
+                ShortcodeTabsFieldOption::make()
+                    ->attrs($attributes)
+                    ->fields([
+                        'title' => [
+                            'title' => __('Title'),
+                        ],
+                        'description' => [
+                            'title' => __('Description'),
+                            'type' => 'textarea',
+                        ],
+                        'custom_url' => [
+                            'title' => __('Custom URL'),
+                            'type' => 'text',
+                            'placeholder' => __('Enter a custom link'),
+                        ],
+                        'icon' => [
+                            'title' => __('Icon'),
+                            'type' => 'coreIcon',
+                        ],
+                        'icon_image' => [
+                            'title' => __('Icon image'),
+                            'type' => 'image',
+                        ],
+
+                    ])
+                    ->toArray()
+            )
+            ->add(
+                'background_image',
+                MediaImageField::class,
+                MediaImageFieldOption::make()
+                    ->label(__('Background image'))
+                    ->toArray()
+            )
+            ->add(
+                'background_color',
+                ColorField::class,
+                ColorFieldOption::make()
+                    ->label(__('Background color'))
+                    ->toArray(),
+            );
+    });
 });
     
