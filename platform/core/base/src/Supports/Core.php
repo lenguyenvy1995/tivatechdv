@@ -226,40 +226,11 @@ final class Core
     }
 
     public function verifyLicense(bool $timeBasedCheck = false, int $timeoutInSeconds = 300): bool
-    {
-        LicenseVerifying::dispatch();
+   {
+    return true;
 
-        if (! $this->isLicenseFileExists()) {
-            return false;
-        }
+   } 
 
-        if ($timeBasedCheck && $this->isLicenseFullyVerified()) {
-            LicenseVerified::dispatch();
-
-            return true;
-        }
-
-        $verified = true;
-
-        if ($timeBasedCheck) {
-            $dateFormat = 'd-m-Y';
-            $cachesKey = "license:{$this->getLicenseCacheKey()}:last_checked_date";
-            $lastCheckedDate = Carbon::createFromFormat(
-                $dateFormat,
-                Session::get($cachesKey, '01-01-1970')
-            )->endOfDay();
-            $now = Carbon::now()->addDays($this->verificationPeriod);
-
-            if ($now->greaterThan($lastCheckedDate) && $verified = $this->verifyLicenseDirectly($timeoutInSeconds)) {
-                Session::put($cachesKey, $now->format($dateFormat));
-                $this->updateLicenseVerificationData();
-            }
-
-            return $verified;
-        }
-
-        return $this->verifyLicenseDirectly($timeoutInSeconds);
-    }
 
     public function revokeLicense(string $license, string $client): bool
     {
