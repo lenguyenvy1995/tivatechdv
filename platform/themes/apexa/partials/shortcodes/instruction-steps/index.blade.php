@@ -6,28 +6,35 @@
         "--background-color: $bgColor" => $bgColor,
         "--background-image: url($bgImage)" => $bgImage,
     ];
+    $title = $shortcode->title ?? null;
+    $description = $shortcode->description ?? null;
 @endphp
 
 <section class="steps__area-seven shortcode-instruction-steps" @style($variablesStyle)>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-30">
-                @if ($title = $shortcode->title)
-                    <h3 class="text-capitalize mw-460"> {!! BaseHelper::clean($title) !!}</h3>
+        @if ($title || $description)
+            <div class="row">
+                @if ($title)
+                    <div class="{{ $description ? 'col-lg-6' : 'col-12' }} mb-30">
+                        <h2 class="text-capitalize {{ $description ? 'mw-460 text-start' : 'text-center' }}">
+                            {!! BaseHelper::clean($title) !!}
+                        </h2>
+                    </div>
+                @endif
+        
+                @if ($description)
+                    <div class="col-lg-6 mb-30">
+                        <p>{!! BaseHelper::clean($description) !!}</p>
+                    </div>
                 @endif
             </div>
-
-            @if ($description = $shortcode->description)
-                <div class="col-lg-6 mb-30">
-                    <p> {!! BaseHelper::clean($description) !!}</p>
-                </div>
             @endif
         </div>
         <div class="row mt-30">
             @foreach($tabs as $item)
                 @continue(! $title = Arr::get($item, 'title'))
 
-                <div class="col-lg-4 mb-40">
+                <div class="col-lg-4 mb-20">
                     <div class="card-step">
                         <div class="card-icon">
                             @if($iconImage = Arr::get($item, 'icon_image'))
@@ -40,7 +47,7 @@
                             <h5>{!! BaseHelper::clean($title) !!}</h5>
 
                             @if ($description = Arr::get($item, 'description'))
-                                <p>{!! BaseHelper::clean($description) !!}</p>
+                                <p class="mb-0">{!! BaseHelper::clean($description) !!}</p>
                             @endif
 
                             @if (($buttonLabel = Arr::get($item, 'button_label')) && ($buttonUrl = Arr::get($item, 'button_url')))
