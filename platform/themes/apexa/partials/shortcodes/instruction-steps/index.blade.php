@@ -29,7 +29,7 @@
                 @endif
             </div>
             @endif
-        </div>
+ 
         <div class="row mt-30">
             @foreach($tabs as $item)
                 @continue(! $title = Arr::get($item, 'title'))
