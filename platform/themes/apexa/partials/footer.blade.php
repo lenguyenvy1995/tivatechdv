@@ -33,13 +33,7 @@ $footerSidebar = dynamic_sidebar('footer_sidebar');
             </div>
         </div>
     @endif
-        <div id="footer-bottom" class="footer-bottom">
-            <div class="container">
-                <div class="d-flex gap-3 justify-content-center align-items-center bottom-footer-wrapper">
-                    {!! dynamic_sidebar('bottom_footer_sidebar') !!}
-                </div>
-            </div>
-        </div>
+  
         <div id="footer-copyright" class="footer-copyright py-4 bg-dark">
             <div class="container">
                 <div class="d-flex gap-3 justify-content-center align-items-center text-center bottom-footer-wrapper">
