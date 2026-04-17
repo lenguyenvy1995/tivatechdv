@@ -120,10 +120,10 @@
             font-size: 72px;
             line-height: 0;
             color: var(--tg-theme-primary);
-            width: 20%;
+            width: 20%; 
             transition: all 0.3s ease-out 0s;
             @media #{$xs} {
-                width: 30%;
+                width: 25%;
             }
         }
 
@@ -144,7 +144,8 @@
     }
 
     &-style-1 {
-        padding: 110px 0 80px !important;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
         margin-bottom: 0;
     }
 

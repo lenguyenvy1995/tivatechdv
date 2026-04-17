@@ -694,6 +694,18 @@ app()->booted(function (): void {
 
     Shortcode::setAdminConfig('content-feature-list', function (array $attributes) {
         return ShortcodeForm::createFromArray($attributes)
+        ->add(
+            'title',
+            TextField::class,
+            TextFieldOption::make()
+                ->label(__('Title'))
+        )
+        ->add(
+            'description',
+            TextareaField::class,
+            TextareaFieldOption::make()
+                ->label(__('Description'))
+        )
             ->add(
                 'featured_list',
                 ShortcodeTabsField::class,
@@ -716,6 +728,20 @@ app()->booted(function (): void {
                             'type' => 'image',
                         ],
                     ])
+            )
+            ->add(
+                'background_image',
+                MediaImageField::class,
+                MediaImageFieldOption::make()
+                    ->label(__('Background image'))
+                    ->toArray()
+            )
+            ->add(
+                'background_color',
+                ColorField::class,
+                ColorFieldOption::make()
+                    ->label(__('Background color'))
+                    ->toArray(),
             );
     });
 

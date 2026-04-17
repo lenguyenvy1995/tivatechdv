@@ -470,6 +470,7 @@
             }
 
             &>p {
+                text-align: justify;
                 margin-bottom: 35px;
             }
         }
@@ -642,13 +643,13 @@
                 & li {
                     @include flexbox();
                     align-items: flex-start;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 500;
                     color: var(--tg-theme-secondary);
                     font-family: var(--tg-heading-font-family);
                     gap: 12px;
                     margin-bottom: 10px;
-
+                    text-align: justify;
                     & i {
                         width: 26px;
                         height: 26px;

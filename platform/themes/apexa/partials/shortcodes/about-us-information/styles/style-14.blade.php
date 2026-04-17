@@ -1,13 +1,13 @@
 <section class="marketing_expert__area_six shortcode-about-us-information shortcode-about-us-information-style-14" @style($variablesStyle)>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5 mb-30">
+            <div class="col-lg-6 mb-30">
                 @if ($title = $shortcode->title)
-                    <h1 class="title mb-15">{!! BaseHelper::clean($title) !!}</h1>
+                    <h2 class="title mb-15">{!! BaseHelper::clean($title) !!}</h2>
                 @endif
 
                 @if ($description = $shortcode->description)
-                    <p class="mb-45">{!! BaseHelper::clean($description) !!}</p>
+                    <p class= "description mb-3">{!! BaseHelper::clean($description) !!}</p>
                 @endif
 
                 @if (count($tabs))
@@ -27,7 +27,7 @@
             </div>
 
             @if ($image = $shortcode->image)
-                <div class="col-lg-7 mb-30 position-relative">
+                <div class="col-lg-6 mb-30 position-relative">
                     <div class="box-video">
                         {{ RvMedia::image($image, 'marketing-expert') }}
                     </div>

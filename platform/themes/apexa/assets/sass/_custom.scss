@@ -1,3 +1,5 @@
+@use 'utils'as *;
+
 :root {
     --tg-body-font-family: var(--primary-font);
     --tg-heading-font-family: var(--heading-font);
@@ -68,7 +70,7 @@
 @media screen and (max-width: 991px) {
     .bottom-footer-wrapper {
         flex-wrap: wrap;
-    
+
 
         .footer-newsletter {
             width: 100%;
@@ -879,6 +881,26 @@ footer {
                 stroke: var(--primary-color) !important;
             }
         }
+
+        @media #{$xs} {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            .card-icon {
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-position: center;
+            }
+            .card-info{
+                width: 75%;
+                p{
+                    text-align: justify;
+                }
+            }
+        }
     }
 }
 
@@ -1173,12 +1195,6 @@ footer {
 
 .testimonial__area-two+.shortcode-about-us-information-style-6 {
     padding-top: 90px !important;
-}
-
-.marketing_expert__area_six {
-    padding: 90px 0 90px 0 !important;
-
-    margin-bottom: 0 !important;
 }
 
 .brand-area+.shortcode-about-us-information-style-7 {

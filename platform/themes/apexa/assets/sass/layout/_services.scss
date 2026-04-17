@@ -830,6 +830,12 @@
                     padding: 30px 25px;
                     flex-wrap: wrap;
                 }
+                @media #{$xs} {
+                    padding: 10px;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                }
 
                 & .icon {
                     width: 70px;

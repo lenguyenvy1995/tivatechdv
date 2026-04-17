@@ -355,14 +355,19 @@
 .box-faq-right {
     padding-left: 20px;
 }
-
+  
 .marketing_expert__area_six {
-    padding: 125px 0px 0px 0px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     background-color: var(--tg-color-gray-3);
     background-image: url(../img/home6/bg-marketing.png);
     background-repeat: no-repeat;
     background-position: left center;
-    margin-bottom: 130px;
+    margin-bottom: 0;
+    .description {
+        text-align: justify;
+        font-size: 18px;
+    }
 }
 
 .footer__content-two>.color-white {
@@ -783,6 +788,7 @@
     * {
         color: var(--tg-color-white-default);
     }
+ 
 }
 
 .journey_area-seven {

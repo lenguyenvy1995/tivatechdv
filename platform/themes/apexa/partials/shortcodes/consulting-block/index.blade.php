@@ -10,7 +10,7 @@
 <section class="consulting-area shortcode-consulting-block" @style($variablesStyle)>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12">   
                 <div class="consulting-inner-wrap shine-animate-item">
                     <div class="consulting-content">
 

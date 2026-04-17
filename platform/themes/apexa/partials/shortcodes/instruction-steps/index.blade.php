@@ -24,7 +24,7 @@
         
                 @if ($description)
                     <div class="col-lg-6 mb-30">
-                        <p>{!! BaseHelper::clean($description) !!}</p>
+                        <p class="text-justify">{!! BaseHelper::clean($description) !!}</p>
                     </div>
                 @endif
             </div>
