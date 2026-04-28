@@ -28,9 +28,9 @@
                                     {{ RvMedia::image($project->image, $project->name) }}
                                 </div>
                                 <div class="project__content-two">
-                                    <h2 class="title">
+                                    <h3 class="title">
                                         <a class="truncate-3-custom" title="{{ $project->name }}" href="{{ $project->url }}">{{ $project->name }}</a>
-                                    </h2>
+                                    </h3>
 
                                     @if ($category = $project->getMetaData('category', true))
                                         <span>{!! BaseHelper::clean($category) !!}</span>

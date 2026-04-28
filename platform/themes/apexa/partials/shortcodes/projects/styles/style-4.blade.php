@@ -25,7 +25,7 @@
                                             <span>{!! BaseHelper::clean($category) !!}</span>
                                         @endif
 
-                                        <h2 class="title"><a class="truncate-2-custom" title="{{ $project->name }}" href="{{ $project->url }}">{{ $project->name }}</a></h2>
+                                        <h3 class="title"><a class="truncate-2-custom" title="{{ $project->name }}" href="{{ $project->url }}">{{ $project->name }}</a></h3>
 
                                         @if ($description = $project->description)
                                             <p class="truncate-3-custom">{!! BaseHelper::clean($description) !!}</p>

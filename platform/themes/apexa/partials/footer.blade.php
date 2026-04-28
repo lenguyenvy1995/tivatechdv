@@ -38,7 +38,7 @@ $footerSidebar = dynamic_sidebar('footer_sidebar');
             <div class="container">
                 <div class="d-flex gap-3 justify-content-center align-items-center text-center bottom-footer-wrapper">
                     <div class="copy">
-                        <p class="m-0 text-white"> Copyright © {{ date('Y') }} <span class="text-uppercase text-white">{!! theme_option('copyright') !!} </span> </p>
+                        <p class="m-0 text-white"> Copyright © {{ date('Y') }} <span class="text-uppercase text-white">{!! theme_option('copyright') !!} </span> - design by <a href="https://tivatech.vn">TIVATECH.VN</a></p>
                     </div>
                 </div>
 

@@ -27,9 +27,9 @@
                             </div>
                             <div class="project-content">
                                 <div class="left-side-content">
-                                    <h4 class="title">
-                                        <a class="truncate-1-custom" title="{{ $project->name }}" href="{{ $project->url }}">{{ $project->name }}</a>
-                                    </h4>
+                                    <h3 class="title">
+                                        <a class="truncate-2-custom" title="{{ $project->name }}" href="{{ $project->url }}">{{ $project->name }}</a>
+                                    </h3>
 
                                     @if ($category = $project->getMetaData('category', true))
                                         <span>{!! BaseHelper::clean($category) !!}</span>
