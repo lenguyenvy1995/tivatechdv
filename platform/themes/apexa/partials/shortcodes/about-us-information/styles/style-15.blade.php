@@ -50,7 +50,7 @@
                     </div>
 
                     @if ($description = $shortcode->description)
-                        <p>{!! BaseHelper::clean($description) !!}</p>
+                        <p class="text-justify">{!! BaseHelper::clean($description) !!}</p>
                     @endif
                     <div class="about__content-inner-five">
                         @if ($image1 = $shortcode->image_1)
