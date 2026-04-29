@@ -64,7 +64,7 @@
                                 <ul class="list-wrap">
                                     @foreach($tabs as $tab)
                                         @continue(! $title = Arr::get($tab, 'title'))
-                                        <li><i class="flaticon-arrow-button"></i>{!! BaseHelper::clean($title) !!}</li>
+                                        <li class="fw-bold"><i class="flaticon-arrow-button"></i>{!! BaseHelper::clean($title) !!}</li>
                                     @endforeach
                                 </ul>
                             </div>
