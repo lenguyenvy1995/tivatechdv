@@ -4,7 +4,7 @@
             <div class="col-lg-6 col-md-9 mb-40">
                 <div class="about__img-wrap-seven about__img-wrap-home8">
                     @if ($image = $shortcode->image)
-                        {{ RvMedia::image($image, 'about-us-information', attributes: ['class' => 'img-main']) }}}
+                        {{ RvMedia::image($image, 'about-us-information', attributes: ['class' => 'img-main']) }}
                     @endif
 
                     @if (($dataCount = $shortcode->data_count) && ($dataCountDescription = $shortcode->data_count_description))
