@@ -33,12 +33,11 @@
         &-three {
             position: relative;
             overflow: hidden;
-            padding: 120px 0;
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
             z-index: 1;
 
-            @media #{$xs} {
-                padding: 100px 0;
-            }
+          
         }
 
         &-four {
@@ -173,7 +172,7 @@
         }
     }
 
-    &-list {
+    &-list { 
         & .list-wrap {
             & li {
                 @include flexbox();
@@ -415,7 +414,8 @@
 
                 & .main-img {
                     position: relative;
-                    @include border-radius(50%);
+                    // @include border-radius(50%);
+                    border-radius: 0;
                     overflow: hidden;
                     display: inline-block;
                     border: 18px solid var(--tg-color-white-default);
@@ -679,7 +679,7 @@
         &::before {
             content: '';
             position: absolute;
-            right: 0;
+            right: -10px;
             top: 50%;
             @include transform(translateY(-50%));
             width: 1px;

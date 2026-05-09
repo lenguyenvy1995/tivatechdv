@@ -1,7 +1,7 @@
-<section class="choose__area-three shortcode-about-us-information shortcode-about-us-information-style-9" @style($variablesStyle)>
+<section class="choose__area-three py-4 shortcode-about-us-information shortcode-about-us-information-style-10" @style($variablesStyle)>
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-7 col-md-9 order-0 order-lg-2">
+            <div class="col-lg-5 col-md-12 order-0 order-lg-2">
                 <div class="choose__img-wrap-three">
                     @if ($image = $shortcode->image)
                         <div class="main-img">
@@ -14,7 +14,7 @@
                     @endif
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-7">
                 <div class="choose__content-three">
                     <div class="section-title mb-25 tg-heading-subheading animation-style3">
                         @if ($subtitle = $shortcode->subtitle)

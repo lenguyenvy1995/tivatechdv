@@ -43,7 +43,7 @@
                                                 <h4 class="title">{!! BaseHelper::clean($title) !!}</h4>
 
                                                 @if ($description = Arr::get($item, 'description'))
-                                                    <p >{!! BaseHelper::clean($description) !!}</p>
+                                                    <p class="text-justify mb-3">{!! BaseHelper::clean($description) !!}</p>
                                                 @endif
                                             </div>
                                         </div>

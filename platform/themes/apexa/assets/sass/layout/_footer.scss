@@ -36,7 +36,7 @@
             &>* {
                 &:nth-child(2) {
                     & .footer-widget {
-                        margin-inline-start: 50px;
+                        margin-inline-start: 10px;
 
                         @media #{$md} {
                             margin-inline-start: 0;
@@ -46,7 +46,7 @@
 
                 &:nth-child(3) {
                     & .footer-widget {
-                        margin-inline-start: 70px;
+                        margin-inline-start: 10px;
 
                         @media #{$md} {
                             margin-inline-start: 0;
@@ -80,7 +80,7 @@
                 &>* {
                     &:nth-child(3) {
                         & .footer-widget {
-                            margin-inline-start: 65px;
+                            margin-inline-start: 10px;
 
                             @media #{$md} {
                                 margin-inline-start: 0;
@@ -139,7 +139,7 @@
 
     &__content {
         &-two {
-            width: 80%;
+            width: 100%;
 
             @media #{$md} {
                 width: 100%;
