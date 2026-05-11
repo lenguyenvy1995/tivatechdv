@@ -3,7 +3,7 @@
     $logo = Arr::get($config, 'logo', theme_option('logo'));
 @endphp
 
-<div class="col widget-information widget-information-style-3">
+<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6  widget-information widget-information-style-3">
     <div class="footer-widget">
         <div class="footer__content-two">
             @if($logo)
